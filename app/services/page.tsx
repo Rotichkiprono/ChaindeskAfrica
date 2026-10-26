@@ -1,120 +1,189 @@
-import Link from "next/link";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { Smartphone, CheckCircle, Shield, ArrowUpRight } from "lucide-react";
 
 export default function ServicesPage() {
-  const services = [
-    {
-      title: "Enterprise DLT Architecture & Implementation",
-      description:
-        "End-to-end engineering of private, consortium, and public blockchain infrastructures tailored to enterprise throughput, privacy, and compliance requirements.",
-      features: [
-        "Private and consortium ledger deployment (Hyperledger, Substrate, Polygon CDK)",
-        "Zero-knowledge proof integration for sensitive enterprise data",
-        "Legacy enterprise systems and ERP integration (SAP, Oracle)",
-        "High-performance cross-chain and cross-network bridges",
-      ],
-    },
-    {
-      title: "Smart Contract Audits & Security Verification",
-      description:
-        "Comprehensive code audits, formal verification, and automated static analysis to safeguard protocol logic and high-value digital asset reserves.",
-      features: [
-        "Static and dynamic vulnerability analysis (Slither, Mythril, Certora)",
-        "Line-by-line manual logic verification and economic exploit simulations",
-        "EVM, Solana/Rust, and Move ecosystem compatibility",
-        "Detailed remediation roadmaps and executive disclosure reports",
-      ],
-    },
-    {
-      title: "Real-World Asset (RWA) Tokenization",
-      description:
-        "Technical structuring and fractionalization workflows for commodities, real estate, carbon credits, and fixed-income debt securities in African markets.",
-      features: [
-        "ERC-3643, ERC-1400, and compliant permissioned token standards",
-        "Identity-gated transfer restrictions tied to accredited investor credentials",
-        "Automated yield distribution and cap table management",
-        "On-chain oracle integration for real-time asset valuation",
-      ],
-    },
-    {
-      title: "Institutional Digital Asset Infrastructure",
-      description:
-        "Robust, redundant infrastructure for multi-party computation (MPC) key custody, validator operations, and programmatic liquidity routing.",
-      features: [
-        "Institutional custody workflows (Fireblocks, BitGo, MPC vault architectures)",
-        "Enterprise validator and staking node deployment across African datacenters",
-        "Liquidity settlement pipes and treasury automation",
-        "Disaster recovery and business continuity frameworks",
-      ],
-    },
-  ];
-
   return (
-    <div className="bg-white">
-      {/* Header */}
-      <section className="border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <p className="text-xs font-semibold tracking-wider text-slate-500 uppercase mb-3">
-            What We Do
-          </p>
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 mb-4">
-            Consulting & Engineering Services
+    <div className="bg-white min-h-screen py-16 sm:py-24">
+      <div className="max-w-4xl mx-auto px-6 space-y-20">
+        {/* Page Title */}
+        <div className="border-b border-slate-200 pb-10">
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
+            Services &amp; Capabilities
           </h1>
-          <p className="text-base text-slate-600 max-w-2xl leading-relaxed">
-            From preliminary feasibility studies to full-scale protocol rollout, we provide
-            the engineering discipline and regulatory awareness required for mission-critical deployments.
+          <p className="mt-3 text-base text-slate-600">
+            Enterprise distributed ledger advisory, systems architecture, and production deployments.
           </p>
         </div>
-      </section>
 
-      {/* Services List */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-12">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="border border-slate-200 p-8 sm:p-10 bg-white hover:border-slate-300 transition-colors"
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                  <div className="lg:col-span-5">
-                    <span className="text-xs font-mono text-slate-400 block mb-2">
-                      0{index + 1} // SERVICE
-                    </span>
-                    <h2 className="text-xl font-bold text-slate-900 mb-3">
-                      {service.title}
-                    </h2>
-                    <p className="text-sm text-slate-600 leading-relaxed mb-6">
-                      {service.description}
-                    </p>
-                    <Link
-                      href="/contact"
-                      className="inline-flex items-center text-sm font-medium text-slate-900 hover:text-slate-600 transition-colors"
-                    >
-                      Inquire about this service
-                      <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
-                    </Link>
+        {/* Section 1: Core Foundation */}
+        <section aria-labelledby="foundation-heading">
+          <h2 id="foundation-heading" className="sr-only">
+            Core Foundation
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 border border-slate-200 bg-slate-50/50">
+            <div className="space-y-2">
+              <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                Mission
+              </span>
+              <p className="text-base sm:text-lg text-slate-900 leading-relaxed font-medium">
+                To build secure, scalable, and transparent digital infrastructure for African enterprises.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                Vision
+              </span>
+              <p className="text-base sm:text-lg text-slate-900 leading-relaxed font-medium">
+                A frictionless digital economy powered by robust decentralized ledgers.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 2: Capabilities */}
+        <section aria-labelledby="capabilities-heading" className="border-b border-slate-200 pb-16">
+          <h2 id="capabilities-heading" className="text-2xl font-bold tracking-tight text-slate-900 mb-6">
+            Core Services
+          </h2>
+          <ul className="space-y-4 text-base text-slate-700">
+            <li className="flex items-center space-x-3">
+              <span className="h-1.5 w-1.5 rounded-full bg-slate-900 flex-shrink-0" />
+              <span>Custom DLT Architecture</span>
+            </li>
+            <li className="flex items-center space-x-3">
+              <span className="h-1.5 w-1.5 rounded-full bg-slate-900 flex-shrink-0" />
+              <span>Asset Tokenization</span>
+            </li>
+            <li className="flex items-center space-x-3">
+              <span className="h-1.5 w-1.5 rounded-full bg-slate-900 flex-shrink-0" />
+              <span>Smart Contract Auditing</span>
+            </li>
+            <li className="flex items-center space-x-3">
+              <span className="h-1.5 w-1.5 rounded-full bg-slate-900 flex-shrink-0" />
+              <span>Web3 System Integration</span>
+            </li>
+          </ul>
+        </section>
+
+        {/* Section 3: Portfolio (Meatsoko) */}
+        <section aria-labelledby="case-study-heading">
+          <div className="mb-10">
+            <div className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">
+              Portfolio
+            </div>
+            <h2 id="case-study-heading" className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mb-4">
+              Case Study: Meatsoko Technologies
+            </h2>
+            <p className="text-base text-slate-600 leading-relaxed max-w-3xl">
+              Implementation of an ERC-3643 equity tokenization standard on the Hedera network,
+              featuring automated corporate actions and seamless mobile app integration.
+            </p>
+          </div>
+
+          {/* Mobile Screen Placeholders */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-10 pt-4">
+            {/* Screen Placeholder 1: Tokenized Equity Overview */}
+            <div className="w-64 aspect-[9/16] rounded-2xl border border-slate-200 bg-white shadow-md p-4 flex flex-col justify-between overflow-hidden">
+              <div>
+                {/* Device Speaker Notch */}
+                <div className="flex justify-center mb-4">
+                  <div className="h-1 w-12 bg-slate-200 rounded-full" />
+                </div>
+
+                {/* App Header */}
+                <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+                  <span className="text-[11px] font-bold tracking-tight text-slate-900">
+                    MEATSOKO
+                  </span>
+                  <span className="text-[9px] font-mono px-1.5 py-0.5 bg-slate-100 text-slate-600 rounded">
+                    Hedera
+                  </span>
+                </div>
+
+                {/* Screen Content */}
+                <div className="mt-4 space-y-3">
+                  <div className="p-3 bg-slate-50 border border-slate-100 rounded-lg">
+                    <span className="text-[10px] text-slate-500 block">Asset Standard</span>
+                    <span className="text-xs font-semibold text-slate-900">ERC-3643 Permissioned</span>
                   </div>
 
-                  <div className="lg:col-span-7 bg-slate-50 p-6 border border-slate-100">
-                    <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-4">
-                      Key Deliverables & Specifications
-                    </h3>
-                    <ul className="space-y-3">
-                      {service.features.map((feature, fIndex) => (
-                        <li key={fIndex} className="flex items-start text-sm text-slate-700">
-                          <CheckCircle2 className="h-4 w-4 text-slate-900 mr-2.5 mt-0.5 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="p-3 bg-slate-50 border border-slate-100 rounded-lg">
+                    <span className="text-[10px] text-slate-500 block">Tokenized Cap Table</span>
+                    <span className="text-sm font-bold text-slate-900">1,250,000 MTSK</span>
+                    <span className="text-[9px] text-slate-500 block mt-0.5">Series A Preferred Equity</span>
+                  </div>
+
+                  <div className="p-2.5 border border-slate-100 rounded-lg flex items-center justify-between">
+                    <div className="flex items-center space-x-2">
+                      <Shield className="h-3.5 w-3.5 text-slate-700" />
+                      <span className="text-[10px] font-medium text-slate-800">Identity KYC</span>
+                    </div>
+                    <span className="text-[9px] text-slate-600 font-mono">Verified</span>
                   </div>
                 </div>
               </div>
-            ))}
+
+              {/* Bottom Nav Placeholder */}
+              <div className="pt-3 border-t border-slate-100 flex items-center justify-around text-slate-400">
+                <div className="h-1.5 w-6 bg-slate-900 rounded-full" />
+                <div className="h-1.5 w-6 bg-slate-200 rounded-full" />
+                <div className="h-1.5 w-6 bg-slate-200 rounded-full" />
+              </div>
+            </div>
+
+            {/* Screen Placeholder 2: Automated Corporate Actions */}
+            <div className="w-64 aspect-[9/16] rounded-2xl border border-slate-200 bg-white shadow-md p-4 flex flex-col justify-between overflow-hidden">
+              <div>
+                {/* Device Speaker Notch */}
+                <div className="flex justify-center mb-4">
+                  <div className="h-1 w-12 bg-slate-200 rounded-full" />
+                </div>
+
+                {/* App Header */}
+                <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+                  <span className="text-[11px] font-bold tracking-tight text-slate-900">
+                    CORPORATE ACTIONS
+                  </span>
+                  <Smartphone className="h-3.5 w-3.5 text-slate-400" />
+                </div>
+
+                {/* Screen Content */}
+                <div className="mt-4 space-y-3">
+                  <div className="p-3 bg-slate-50 border border-slate-100 rounded-lg">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] text-slate-500">Dividend Yield</span>
+                      <ArrowUpRight className="h-3 w-3 text-slate-700" />
+                    </div>
+                    <span className="text-sm font-bold text-slate-900">Auto-Disbursed</span>
+                    <span className="text-[9px] text-slate-500 block mt-0.5">Direct to Smart Wallet</span>
+                  </div>
+
+                  <div className="p-3 bg-slate-50 border border-slate-100 rounded-lg space-y-1.5">
+                    <span className="text-[10px] text-slate-500 block">Governance Ballot</span>
+                    <div className="flex items-center space-x-1.5">
+                      <CheckCircle className="h-3.5 w-3.5 text-slate-800" />
+                      <span className="text-[10px] font-medium text-slate-800">Q3 Resolution Passed</span>
+                    </div>
+                  </div>
+
+                  <div className="p-2.5 border border-slate-100 rounded-lg">
+                    <span className="text-[10px] text-slate-500 block">Consensus Timestamp</span>
+                    <span className="text-[9px] font-mono text-slate-700 block truncate">
+                      hedera::0.0.482910@169837
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom Nav Placeholder */}
+              <div className="pt-3 border-t border-slate-100 flex items-center justify-around text-slate-400">
+                <div className="h-1.5 w-6 bg-slate-200 rounded-full" />
+                <div className="h-1.5 w-6 bg-slate-900 rounded-full" />
+                <div className="h-1.5 w-6 bg-slate-200 rounded-full" />
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 }
