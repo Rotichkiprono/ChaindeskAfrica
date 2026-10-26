@@ -1,111 +1,49 @@
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Cpu, Landmark, FileCode } from "lucide-react";
 
 export default function HomePage() {
   return (
-    <div className="bg-white">
-      {/* Hero Section */}
-      <section className="border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
-          <div className="max-w-3xl">
-            <p className="text-xs font-semibold tracking-wider text-slate-500 uppercase mb-4">
-              Enterprise Advisory & Engineering
-            </p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 mb-6">
-              Institutional Web3 & Distributed Ledger Solutions for Africa.
-            </h1>
-            <p className="text-lg text-slate-600 leading-relaxed mb-8">
-              Chaindesk Africa delivers institutional-grade consulting, smart contract architecture,
-              and DLT implementation for enterprises, financial institutions, and public sector organizations.
-            </p>
-            <div className="flex flex-wrap items-center gap-4">
-              <Link
-                href="/services"
-                className="inline-flex items-center justify-center px-5 py-3 text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 transition-colors"
-              >
-                Explore Services
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-5 py-3 text-sm font-medium text-slate-900 bg-white border border-slate-300 hover:border-slate-400 hover:bg-slate-50 transition-colors"
-              >
-                Schedule Consultation
-              </Link>
-            </div>
-          </div>
+    <section className="relative flex-1 flex flex-col items-center justify-center min-h-[calc(100vh-8.5rem)] px-6 py-32 sm:py-48 lg:py-56 bg-gradient-to-b from-slate-50 to-white overflow-hidden text-center">
+      {/* Subtle, static isometric grid */}
+      <svg
+        className="absolute inset-0 h-full w-full stroke-slate-200/50 [mask-image:radial-gradient(ellipse_at_center,white_20%,transparent_80%)] pointer-events-none"
+        aria-hidden="true"
+      >
+        <defs>
+          <pattern
+            id="isometric-grid"
+            width="60"
+            height="103.923"
+            patternUnits="userSpaceOnUse"
+          >
+            <path
+              d="M30 0 L60 51.9615 L30 103.923 L0 51.9615 Z M0 0 L30 51.9615 L0 103.923 M60 0 L30 51.9615 L60 103.923 M0 51.9615 L60 51.9615"
+              fill="none"
+              strokeWidth="0.75"
+            />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#isometric-grid)" />
+      </svg>
+
+      {/* Centered Hero Content */}
+      <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1]">
+          Enterprise Web3 &amp; DLT Consultancy
+        </h1>
+
+        <p className="mt-6 sm:mt-8 max-w-2xl text-lg sm:text-xl text-slate-600 leading-relaxed font-normal">
+          We architect and deploy scalable blockchain infrastructure, tokenization systems, and smart contracts for institutional clients.
+        </p>
+
+        <div className="mt-10 sm:mt-12">
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center px-8 py-3.5 text-sm sm:text-base font-medium text-white bg-slate-900 hover:bg-slate-800 transition-colors"
+          >
+            Contact Us
+          </Link>
         </div>
-      </section>
-
-      {/* Focus Areas Grid */}
-      <section className="py-20 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold tracking-tight text-slate-900">
-              Core Capabilities
-            </h2>
-            <p className="text-sm text-slate-600 mt-1">
-              Rigorous, production-ready engineering designed for compliant enterprise environments.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="p-6 border border-slate-200 bg-white">
-              <ShieldCheck className="h-6 w-6 text-slate-900 mb-4" />
-              <h3 className="font-semibold text-slate-900 mb-2">Smart Contract Security</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Comprehensive security audits, formal verification, and vulnerability assessments for EVM and Rust-based protocols.
-              </p>
-            </div>
-
-            <div className="p-6 border border-slate-200 bg-white">
-              <Cpu className="h-6 w-6 text-slate-900 mb-4" />
-              <h3 className="font-semibold text-slate-900 mb-2">Enterprise DLT Architecture</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Design and deployment of permissioned ledgers, Layer-2 networks, and high-throughput transaction pipelines.
-              </p>
-            </div>
-
-            <div className="p-6 border border-slate-200 bg-white">
-              <Landmark className="h-6 w-6 text-slate-900 mb-4" />
-              <h3 className="font-semibold text-slate-900 mb-2">Asset Tokenization</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Compliant structuring and technical implementation for real-world asset (RWA) tokenization and digital securities.
-              </p>
-            </div>
-
-            <div className="p-6 border border-slate-200 bg-white">
-              <FileCode className="h-6 w-6 text-slate-900 mb-4" />
-              <h3 className="font-semibold text-slate-900 mb-2">Regulatory & Compliance Tech</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Integration of AML/KYC modules, on-chain reporting, and jurisdiction-compliant transaction monitoring.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Advisory Callout */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border border-slate-200 p-8 sm:p-12 bg-slate-50 flex flex-col md:flex-row md:items-center justify-between gap-8">
-            <div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">
-                Accelerate your organization&apos;s digital ledger initiative
-              </h3>
-              <p className="text-sm text-slate-600 max-w-xl">
-                Partner with seasoned engineers and advisors who understand the operational realities of African markets and global distributed systems.
-              </p>
-            </div>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-5 py-3 text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 transition-colors whitespace-nowrap"
-            >
-              Contact Our Advisors
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
