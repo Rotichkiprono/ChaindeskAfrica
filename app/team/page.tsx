@@ -1,77 +1,81 @@
+import { Mail, Linkedin } from "lucide-react";
+
 export default function TeamPage() {
-  const members = [
+  const team = [
     {
       name: "Rotich Kiprono",
-      role: "Managing Director & Principal Consultant",
-      bio: "Over a decade of experience advising institutional clients on distributed ledger adoption, digital currency frameworks, and enterprise technology strategy across Pan-African markets.",
-      credentials: "MSc Computer Science, Ex-Fintech Infrastructure Lead",
+      title: "Software & DLT Engineer",
+      email: "rotich@chaindesk.africa",
+      linkedin: "https://linkedin.com",
     },
     {
-      name: "Dr. Amina Osei",
-      role: "Head of Cryptographic Engineering",
-      bio: "Specializes in zero-knowledge proof applications, applied cryptography, and consensus mechanism modeling for high-scale permissioned networks.",
-      credentials: "PhD Applied Cryptography, IEEE Distributed Systems Fellow",
+      name: "Amina Osei",
+      title: "Smart Contract Security Auditor",
+      email: "amina@chaindesk.africa",
+      linkedin: "https://linkedin.com",
     },
     {
       name: "David Adeleke",
-      role: "Lead Security Auditor",
-      bio: "Veteran smart contract auditor having secured over $800M in cumulative Total Value Locked (TVL) across EVM and Rust protocols.",
-      credentials: "OSCP, Certified Ethereum Security Professional",
+      title: "Distributed Systems Architect",
+      email: "david@chaindesk.africa",
+      linkedin: "https://linkedin.com",
     },
     {
       name: "Faith Mwangi",
-      role: "Director of Regulatory Strategy & Compliance",
-      bio: "Directs institutional engagement with financial regulators, central banks, and capital markets authorities on digital asset frameworks and sandbox programs.",
-      credentials: "LLM International Financial Law, ACAMS Certified",
+      title: "Regulatory & Compliance Lead",
+      email: "faith@chaindesk.africa",
+      linkedin: "https://linkedin.com",
     },
   ];
 
   return (
-    <div className="bg-white">
-      {/* Header */}
-      <section className="border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <p className="text-xs font-semibold tracking-wider text-slate-500 uppercase mb-3">
-            Leadership & Expertise
-          </p>
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 mb-4">
-            Our Advisory Team
+    <div className="bg-white min-h-screen py-16 sm:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="border-b border-slate-200 pb-8 mb-12 sm:mb-16">
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
+            Team
           </h1>
-          <p className="text-base text-slate-600 max-w-2xl leading-relaxed">
-            Our multidisciplinary team unites cryptography researchers, protocol engineers,
-            and regulatory practitioners committed to institutional-grade decentralization.
-          </p>
         </div>
-      </section>
 
-      {/* Team Grid */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {members.map((member, index) => (
-              <div
-                key={index}
-                className="border border-slate-200 p-8 bg-white flex flex-col justify-between"
-              >
-                <div>
-                  <div className="text-xs font-mono text-slate-400 mb-2">
-                    ROLE // {member.role.toUpperCase()}
-                  </div>
-                  <h2 className="text-xl font-bold text-slate-900 mb-1">
-                    {member.name}
-                  </h2>
-                  <p className="text-xs font-medium text-slate-500 mb-4">
-                    {member.credentials}
-                  </p>
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    {member.bio}
-                  </p>
-                </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          {team.map((member, index) => (
+            <div key={index} className="flex flex-col">
+              {/* Grayscale square image placeholder */}
+              <div className="bg-slate-200 aspect-square w-full" />
+
+              {/* Member Name */}
+              <h2 className="text-lg font-bold text-slate-900 mt-4">
+                {member.name}
+              </h2>
+
+              {/* Title */}
+              <p className="text-slate-500 text-sm mt-1">
+                {member.title}
+              </p>
+
+              {/* Social / Contact Icons */}
+              <div className="flex items-center space-x-3 mt-4 text-slate-400">
+                <a
+                  href={`mailto:${member.email}`}
+                  className="hover:text-slate-900 transition-colors"
+                  aria-label={`Email ${member.name}`}
+                >
+                  <Mail className="h-4 w-4" />
+                </a>
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-slate-900 transition-colors"
+                  aria-label={`${member.name} LinkedIn`}
+                >
+                  <Linkedin className="h-4 w-4" />
+                </a>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
     </div>
   );
 }
