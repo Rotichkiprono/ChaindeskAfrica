@@ -109,7 +109,7 @@ export default function MeatsokoCarousel() {
           type="button"
           onClick={handlePrev}
           className="absolute -left-3 sm:-left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/80 backdrop-blur-md border border-slate-200/80 shadow-md flex items-center justify-center text-slate-800 hover:text-slate-950 hover:bg-white hover:scale-105 active:scale-95 transition-all duration-200 focus:outline-none"
-          aria-label="Previous app screen"
+          aria-label="Previous image"
         >
           <ChevronLeft className="h-5 w-5" />
         </button>
@@ -158,7 +158,7 @@ export default function MeatsokoCarousel() {
           type="button"
           onClick={handleNext}
           className="absolute -right-3 sm:-right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/80 backdrop-blur-md border border-slate-200/80 shadow-md flex items-center justify-center text-slate-800 hover:text-slate-950 hover:bg-white hover:scale-105 active:scale-95 transition-all duration-200 focus:outline-none"
-          aria-label="Next app screen"
+          aria-label="Next image"
         >
           <ChevronRight className="h-5 w-5" />
         </button>

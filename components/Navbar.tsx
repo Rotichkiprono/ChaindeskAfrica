@@ -94,7 +94,7 @@ export default function Navbar() {
             type="button"
             onClick={() => setIsOpen(!isOpen)}
             className="p-2 -mr-2 text-slate-700 hover:text-slate-900 hover:bg-slate-100/80 rounded-lg transition-colors focus:outline-none"
-            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-label="Toggle mobile menu"
             aria-expanded={isOpen}
           >
             {isOpen ? (

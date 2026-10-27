@@ -5,10 +5,16 @@ export default function HomePage() {
   return (
     <div className="flex flex-col flex-1 bg-transparent">
       {/* Hero Section */}
-      <section className="relative flex-1 flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-4 md:px-8 lg:px-16 py-16 sm:py-24 md:py-32 lg:py-40 overflow-hidden text-center bg-transparent">
+      <section
+        aria-labelledby="hero-heading"
+        className="relative flex-1 flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-4 md:px-8 lg:px-16 py-16 sm:py-24 md:py-32 lg:py-40 overflow-hidden text-center bg-transparent"
+      >
         {/* Centered Hero Content */}
         <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium tracking-tight text-slate-900 leading-[1.15]">
+          <h1
+            id="hero-heading"
+            className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium tracking-tight text-slate-900 leading-[1.15]"
+          >
             Enterprise Web3 &amp; DLT Consultancy
           </h1>
 
@@ -29,20 +35,26 @@ export default function HomePage() {
       </section>
 
       {/* The Advantage Section */}
-      <section className="border-t border-slate-200/80 bg-white/70 backdrop-blur-sm py-12 md:py-20 lg:py-24">
+      <section
+        aria-labelledby="advantage-heading"
+        className="border-t border-slate-200/80 bg-white/70 backdrop-blur-sm py-12 md:py-20 lg:py-24"
+      >
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
           <div className="text-center max-w-2xl mx-auto mb-10 md:mb-16">
             <p className="text-xs font-semibold tracking-widest uppercase text-slate-500 mb-2">
               Strategic Value
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">
+            <h2
+              id="advantage-heading"
+              className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900"
+            >
               The Chaindesk Advantage
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
             {/* Point 1: Institutional Security */}
-            <div className="p-6 md:p-8 border border-slate-200/80 bg-slate-50/60 transition-colors hover:border-slate-300 rounded-2xl md:rounded-none">
+            <article className="p-6 md:p-8 border border-slate-200/80 bg-slate-50/60 transition-colors hover:border-slate-300 rounded-2xl md:rounded-none">
               <span className="text-xs font-mono text-slate-400 block mb-3">01 // ADVISORY</span>
               <h3 className="text-lg font-bold text-slate-900 mb-2">
                 Institutional Security
@@ -50,10 +62,10 @@ export default function HomePage() {
               <p className="text-sm md:text-base text-slate-600 leading-relaxed">
                 Formal protocol verification, exhaustive multi-stage code auditing, and military-grade cryptographic key management.
               </p>
-            </div>
+            </article>
 
             {/* Point 2: Seamless Web3 Integration */}
-            <div className="p-6 md:p-8 border border-slate-200/80 bg-slate-50/60 transition-colors hover:border-slate-300 rounded-2xl md:rounded-none">
+            <article className="p-6 md:p-8 border border-slate-200/80 bg-slate-50/60 transition-colors hover:border-slate-300 rounded-2xl md:rounded-none">
               <span className="text-xs font-mono text-slate-400 block mb-3">02 // INTEGRATION</span>
               <h3 className="text-lg font-bold text-slate-900 mb-2">
                 Seamless Web3 Integration
@@ -61,10 +73,10 @@ export default function HomePage() {
               <p className="text-sm md:text-base text-slate-600 leading-relaxed">
                 Turnkey interoperability between legacy core enterprise databases, ERP software, and decentralized ledgers.
               </p>
-            </div>
+            </article>
 
             {/* Point 3: Scalable Architecture */}
-            <div className="p-6 md:p-8 border border-slate-200/80 bg-slate-50/60 transition-colors hover:border-slate-300 rounded-2xl md:rounded-none">
+            <article className="p-6 md:p-8 border border-slate-200/80 bg-slate-50/60 transition-colors hover:border-slate-300 rounded-2xl md:rounded-none">
               <span className="text-xs font-mono text-slate-400 block mb-3">03 // INFRASTRUCTURE</span>
               <h3 className="text-lg font-bold text-slate-900 mb-2">
                 Scalable Architecture
@@ -72,7 +84,7 @@ export default function HomePage() {
               <p className="text-sm md:text-base text-slate-600 leading-relaxed">
                 Modular Layer-2 networks and high-throughput consensus engines built to sustain enterprise transaction volumes.
               </p>
-            </div>
+            </article>
           </div>
         </div>
       </section>

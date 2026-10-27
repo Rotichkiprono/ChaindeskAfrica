@@ -55,7 +55,7 @@ export default function ServicesPage() {
     <div className="py-12 md:py-20 lg:py-24 bg-transparent">
       <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-16 space-y-16 md:space-y-24 lg:space-y-32">
         {/* Page Header */}
-        <div className="border-b border-slate-200/80 pb-10">
+        <header className="border-b border-slate-200/80 pb-10">
           <p className="text-xs font-semibold tracking-wider text-slate-500 uppercase mb-3">
             Advisory &amp; Engineering
           </p>
@@ -65,7 +65,7 @@ export default function ServicesPage() {
           <p className="mt-3 text-base text-slate-600 max-w-2xl leading-relaxed">
             Enterprise distributed ledger advisory, systems architecture, and production deployments.
           </p>
-        </div>
+        </header>
 
         {/* Section 1: Core Foundation */}
         <section aria-labelledby="foundation-heading">
@@ -73,22 +73,22 @@ export default function ServicesPage() {
             Core Foundation
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 sm:p-10 border border-slate-200/80 bg-white/70 backdrop-blur-sm rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
-            <div className="space-y-2">
-              <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+            <article className="space-y-2">
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                 Mission
-              </span>
+              </h3>
               <p className="text-base sm:text-lg text-slate-900 leading-relaxed font-medium">
                 To build secure, scalable, and transparent digital infrastructure for African enterprises.
               </p>
-            </div>
-            <div className="space-y-2">
-              <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+            </article>
+            <article className="space-y-2">
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                 Vision
-              </span>
+              </h3>
               <p className="text-base sm:text-lg text-slate-900 leading-relaxed font-medium">
                 A frictionless digital economy powered by robust decentralized ledgers.
               </p>
-            </div>
+            </article>
           </div>
         </section>
 
@@ -107,7 +107,7 @@ export default function ServicesPage() {
             {bentoServices.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div
+                <article
                   key={index}
                   className="bg-white border border-slate-100 rounded-2xl p-8 sm:p-10 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_6px_24px_rgba(0,0,0,0.06)] hover:border-slate-200 transition-all duration-200 flex flex-col justify-between"
                 >
@@ -133,7 +133,7 @@ export default function ServicesPage() {
                       </span>
                     ))}
                   </div>
-                </div>
+                </article>
               );
             })}
           </div>
