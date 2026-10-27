@@ -67,8 +67,8 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="py-16 sm:py-24 bg-transparent">
-      <div className="max-w-6xl mx-auto px-6 space-y-24 sm:space-y-32">
+    <div className="py-12 md:py-20 lg:py-24 bg-transparent">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-16 space-y-16 md:space-y-24 lg:space-y-32">
         {/* Page Header */}
         <div className="border-b border-slate-200/80 pb-10">
           <p className="text-xs font-semibold tracking-wider text-slate-500 uppercase mb-3">

@@ -19,27 +19,27 @@ export default function TeamPage() {
   ];
 
   return (
-    <div className="py-16 sm:py-24 bg-transparent">
-      <div className="max-w-4xl mx-auto px-6">
+    <div className="py-12 md:py-20 lg:py-24 bg-transparent">
+      <div className="max-w-4xl mx-auto px-4 md:px-8 lg:px-16">
         {/* Header */}
-        <div className="border-b border-slate-200/80 pb-8 mb-12 sm:mb-16">
+        <div className="border-b border-slate-200/80 pb-6 md:pb-8 mb-8 md:mb-16">
           <p className="text-xs font-semibold tracking-wider text-slate-500 uppercase mb-2">
             Core Engineering &amp; Advisory
           </p>
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">
             Team
           </h1>
-          <p className="mt-3 text-base text-slate-600 max-w-xl">
+          <p className="mt-3 text-base md:text-lg text-slate-600 max-w-xl">
             The protocol engineers and cybersecurity specialists driving Chaindesk Africa&apos;s institutional deployments.
           </p>
         </div>
 
-        {/* 2-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        {/* 2-Member Team Grid: Stacks vertically on mobile (grid-cols-1) and side-by-side on desktop (md:grid-cols-2) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
           {team.map((member, index) => (
             <div
               key={index}
-              className="bg-white border border-slate-100 rounded-3xl p-6 sm:p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_6px_24px_rgba(0,0,0,0.06)] hover:border-slate-200 transition-all duration-200 flex flex-col justify-between"
+              className="bg-white border border-slate-100 rounded-3xl p-6 md:p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_6px_24px_rgba(0,0,0,0.06)] hover:border-slate-200 transition-all duration-200 flex flex-col justify-between"
             >
               <div>
                 {/* Large, pristine grayscale image placeholder with rounded-2xl */}
@@ -53,12 +53,12 @@ export default function TeamPage() {
                 </div>
 
                 {/* Name */}
-                <h2 className="text-xl font-bold text-slate-900 mt-6 tracking-tight">
+                <h2 className="text-xl md:text-2xl font-bold text-slate-900 mt-6 tracking-tight">
                   {member.name}
                 </h2>
 
                 {/* Exact Title */}
-                <p className="text-slate-500 text-sm mt-1.5 font-medium">
+                <p className="text-slate-500 text-sm md:text-base mt-1.5 font-medium">
                   {member.title}
                 </p>
 
@@ -81,14 +81,14 @@ export default function TeamPage() {
                   href={member.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-slate-900 transition-colors duration-200"
+                  className="min-h-[44px] min-w-[44px] flex items-center justify-center -ml-2 text-slate-400 hover:text-slate-900 transition-colors duration-200"
                   aria-label={`${member.name} LinkedIn`}
                 >
                   <Linkedin className="h-4 w-4" />
                 </a>
                 <a
                   href={`mailto:${member.email}`}
-                  className="text-slate-400 hover:text-slate-900 transition-colors duration-200"
+                  className="min-h-[44px] min-w-[44px] flex items-center justify-center text-slate-400 hover:text-slate-900 transition-colors duration-200"
                   aria-label={`Email ${member.name}`}
                 >
                   <Mail className="h-4 w-4" />
