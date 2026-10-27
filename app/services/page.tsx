@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Cpu, Landmark, ShieldCheck, Workflow, CheckCircle2 } from "lucide-react";
+import MeatsokoCarousel from "@/components/MeatsokoCarousel";
 
 export default function ServicesPage() {
   const bentoServices = [
@@ -30,39 +30,6 @@ export default function ServicesPage() {
       description:
         "Frictionless bridging between core legacy enterprise systems, ERP databases (SAP, Oracle), institutional MPC custody, and decentralized networks.",
       tags: ["ERP Connectors", "MPC Custody APIs", "Node Infrastructure", "Event Pipelines"],
-    },
-  ];
-
-  const meatsokoScreens = [
-    {
-      src: "/MS_1.jpg",
-      title: "Portfolio Valuation",
-      caption: "Real-time tokenized equity holding & valuation over time",
-    },
-    {
-      src: "/MS_2.jpg",
-      title: "Fiat Ingestion (M-Pesa)",
-      caption: "African mobile money on-ramp for tokenized purchases",
-    },
-    {
-      src: "/MS_3.jpg",
-      title: "Hedera Token Dispatch",
-      caption: "Instant peer-to-peer digital asset transfer with Hedera Account IDs",
-    },
-    {
-      src: "/MS_4.jpg",
-      title: "On-Chain Activity",
-      caption: "Auditable transactions, transfers, and automated dividend distribution",
-    },
-    {
-      src: "/MS_5.jpg",
-      title: "Encrypted QR Settlement",
-      caption: "KYC-verified wallet address with encrypted QR dispatch",
-    },
-    {
-      src: "/MS_6.jpg",
-      title: "Cap Table Governance",
-      caption: "Consensus-backed asset governance and dividend statement downloads",
     },
   ];
 
@@ -195,41 +162,9 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          {/* Mobile First Gallery: Swipeable Carousel on Mobile, 3-Column Grid on Desktop */}
-          <div className="relative">
-            <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-5 pb-6 -mx-6 px-6 sm:-mx-0 sm:px-0 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:pb-0">
-              {meatsokoScreens.map((screen, idx) => (
-                <div
-                  key={idx}
-                  className="flex-shrink-0 w-[80vw] sm:w-[280px] md:w-full snap-center flex flex-col group"
-                >
-                  <div className="relative aspect-[9/20] w-full rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200 bg-slate-950">
-                    <Image
-                      src={screen.src}
-                      alt={screen.title}
-                      fill
-                      sizes="(max-width: 768px) 80vw, (max-width: 1200px) 33vw, 360px"
-                      className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
-                    />
-                  </div>
-                  <div className="mt-3 px-1">
-                    <p className="text-xs font-semibold text-slate-900 tracking-tight">
-                      {screen.title}
-                    </p>
-                    <p className="text-[11px] text-slate-500 line-clamp-1 mt-0.5">
-                      {screen.caption}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Mobile swipe indicator */}
-            <div className="md:hidden text-center mt-3">
-              <span className="text-[11px] text-slate-400 font-medium">
-                ← Swipe to explore mobile app screens →
-              </span>
-            </div>
+          {/* Interactive Mobile Phone Carousel */}
+          <div className="pt-2">
+            <MeatsokoCarousel />
           </div>
         </section>
       </div>
