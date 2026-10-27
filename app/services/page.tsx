@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Cpu, Landmark, ShieldCheck, Workflow, CheckCircle2 } from "lucide-react";
 
 export default function ServicesPage() {
@@ -29,6 +30,39 @@ export default function ServicesPage() {
       description:
         "Frictionless bridging between core legacy enterprise systems, ERP databases (SAP, Oracle), institutional MPC custody, and decentralized networks.",
       tags: ["ERP Connectors", "MPC Custody APIs", "Node Infrastructure", "Event Pipelines"],
+    },
+  ];
+
+  const meatsokoScreens = [
+    {
+      src: "/MS_1.jpg",
+      title: "Portfolio Valuation",
+      caption: "Real-time tokenized equity holding & valuation over time",
+    },
+    {
+      src: "/MS_2.jpg",
+      title: "Fiat Ingestion (M-Pesa)",
+      caption: "African mobile money on-ramp for tokenized purchases",
+    },
+    {
+      src: "/MS_3.jpg",
+      title: "Hedera Token Dispatch",
+      caption: "Instant peer-to-peer digital asset transfer with Hedera Account IDs",
+    },
+    {
+      src: "/MS_4.jpg",
+      title: "On-Chain Activity",
+      caption: "Auditable transactions, transfers, and automated dividend distribution",
+    },
+    {
+      src: "/MS_5.jpg",
+      title: "Encrypted QR Settlement",
+      caption: "KYC-verified wallet address with encrypted QR dispatch",
+    },
+    {
+      src: "/MS_6.jpg",
+      title: "Cap Table Governance",
+      caption: "Consensus-backed asset governance and dividend statement downloads",
     },
   ];
 
@@ -120,140 +154,81 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Section 3: Portfolio Showcase (Meatsoko) */}
+        {/* Section 3: Portfolio Showcase (Meatsoko Tokenization Project) */}
         <section aria-labelledby="case-study-heading">
-          <div className="mb-10">
-            <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 block mb-2">
-              Portfolio Showcase
-            </span>
-            <h2 id="case-study-heading" className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">
-              Meatsoko Tokenization Project
-            </h2>
-          </div>
-
-          {/* Asymmetrical Showcase Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            {/* Left Side: Text Description & Scope */}
-            <div className="lg:col-span-5 space-y-6">
-              <div className="inline-flex items-center space-x-2 px-3 py-1 bg-slate-100 text-slate-800 text-xs font-medium rounded-full">
-                <span>Hedera Network</span>
-                <span>•</span>
-                <span>ERC-3643 Standard</span>
-              </div>
-
-              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight leading-snug">
-                Institutional-grade security tokenization for African enterprise
-              </h3>
-
-              <p className="text-base text-slate-600 leading-relaxed">
-                Implementation of an ERC-3643 equity tokenization standard on the Hedera network,
-                featuring automated corporate actions and seamless mobile app integration.
-              </p>
-
-              <div className="space-y-3 pt-2">
-                <div className="flex items-start text-sm text-slate-700">
-                  <CheckCircle2 className="h-4 w-4 text-slate-900 mr-2.5 mt-0.5 flex-shrink-0" />
-                  <span>On-chain accredited investor identity gating &amp; KYC verification</span>
-                </div>
-                <div className="flex items-start text-sm text-slate-700">
-                  <CheckCircle2 className="h-4 w-4 text-slate-900 mr-2.5 mt-0.5 flex-shrink-0" />
-                  <span>Automated dividend distributions routed directly to mobile smart wallets</span>
-                </div>
-                <div className="flex items-start text-sm text-slate-700">
-                  <CheckCircle2 className="h-4 w-4 text-slate-900 mr-2.5 mt-0.5 flex-shrink-0" />
-                  <span>Transparent consensus timestamps via Hedera Consensus Service</span>
-                </div>
-              </div>
+          <div className="mb-12">
+            <div className="flex flex-wrap items-center gap-2 mb-3">
+              <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                Portfolio Showcase
+              </span>
+              <span className="text-slate-300">•</span>
+              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-slate-100 text-slate-800">
+                Hedera Network
+              </span>
+              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-slate-100 text-slate-800">
+                ERC-3643 Standard
+              </span>
             </div>
 
-            {/* Right Side: Mockup Container with Two Overlapping Silhouette Frames */}
-            <div className="lg:col-span-7">
-              <div className="relative rounded-3xl p-8 sm:p-14 bg-gradient-to-tr from-slate-100 to-blue-50/30 border border-slate-200/60 overflow-hidden flex items-center justify-center min-h-[500px]">
-                {/* Background Phone Silhouette (Offset & Rotated) */}
-                <div className="w-52 sm:w-60 aspect-[9/16] rounded-[2.5rem] p-3 bg-white/90 backdrop-blur-md border border-slate-200/80 shadow-lg transform -rotate-6 translate-x-6 sm:translate-x-8 translate-y-6 sm:translate-y-8 flex flex-col justify-between transition-transform duration-300 hover:-rotate-3">
-                  {/* Phone Speaker Pill */}
-                  <div className="mx-auto h-1.5 w-14 bg-slate-300 rounded-full mb-3" />
+            <h2 id="case-study-heading" className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 mb-4">
+              Meatsoko Tokenization Project
+            </h2>
 
-                  {/* Drop-in Screen Placeholder */}
-                  <div className="flex-1 rounded-2xl bg-slate-50 border border-slate-200/70 p-4 flex flex-col justify-between overflow-hidden">
-                    <div>
-                      <div className="flex items-center justify-between pb-2 border-b border-slate-200/60 text-[10px] text-slate-500 font-mono">
-                        <span>HEDERA // CAP TABLE</span>
-                        <span>0.0.482910</span>
-                      </div>
-                      <div className="mt-3 space-y-2">
-                        <div className="h-2 w-16 bg-slate-200 rounded" />
-                        <div className="h-6 w-32 bg-slate-300 rounded" />
-                        <div className="h-10 w-full bg-white border border-slate-200 rounded-lg p-2 flex items-center justify-between">
-                          <div className="h-3 w-20 bg-slate-200 rounded" />
-                          <div className="h-3 w-8 bg-slate-300 rounded" />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="text-[10px] text-center text-slate-400 font-mono">
-                      [ Meatsoko App Asset Screen ]
-                    </div>
-                  </div>
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mb-6">
+              Implementation of an ERC-3643 equity tokenization standard on the Hedera network,
+              featuring automated corporate actions and seamless mobile app integration.
+            </p>
 
-                  {/* Bottom Bar */}
-                  <div className="mx-auto h-1 w-20 bg-slate-300 rounded-full mt-3" />
-                </div>
-
-                {/* Foreground Phone Silhouette (Elevated & Overlapping) */}
-                <div className="relative z-10 w-52 sm:w-60 aspect-[9/16] rounded-[2.5rem] p-3 bg-white border border-slate-200/90 shadow-2xl shadow-slate-400/25 transform rotate-3 -translate-x-6 sm:-translate-x-8 -translate-y-4 sm:-translate-y-6 flex flex-col justify-between transition-transform duration-300 hover:rotate-1">
-                  {/* Phone Speaker Pill */}
-                  <div className="mx-auto h-1.5 w-14 bg-slate-300 rounded-full mb-3" />
-
-                  {/* Drop-in Screen Placeholder */}
-                  <div className="flex-1 rounded-2xl bg-white border border-slate-200 p-4 flex flex-col justify-between shadow-inner overflow-hidden">
-                    <div>
-                      <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-                        <span className="text-[11px] font-bold text-slate-900 tracking-tight">
-                          MEATSOKO
-                        </span>
-                        <span className="text-[9px] font-mono px-1.5 py-0.5 bg-slate-100 text-slate-700 rounded">
-                          ERC-3643
-                        </span>
-                      </div>
-
-                      <div className="mt-4 space-y-3">
-                        <div className="p-3 bg-slate-50 border border-slate-100 rounded-xl">
-                          <span className="text-[9px] uppercase tracking-wider text-slate-500 block">
-                            Tokenized Cap Table
-                          </span>
-                          <span className="text-base font-bold text-slate-900 block mt-0.5">
-                            1,250,000 MTSK
-                          </span>
-                          <span className="text-[10px] text-slate-500">
-                            Series A Preferred Shares
-                          </span>
-                        </div>
-
-                        <div className="p-3 bg-slate-50 border border-slate-100 rounded-xl flex items-center justify-between">
-                          <div>
-                            <span className="text-[9px] uppercase tracking-wider text-slate-500 block">
-                              Automated Yield
-                            </span>
-                            <span className="text-xs font-semibold text-slate-900">
-                              Disbursed on Hedera
-                            </span>
-                          </div>
-                          <span className="text-[10px] font-mono text-emerald-700 font-medium">
-                            Active
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="text-[10px] text-center text-slate-400 font-mono pt-2">
-                      [ Meatsoko App Wallet Screen ]
-                    </div>
-                  </div>
-
-                  {/* Bottom Bar */}
-                  <div className="mx-auto h-1 w-20 bg-slate-300 rounded-full mt-3" />
-                </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-200/80">
+              <div className="flex items-start text-xs sm:text-sm text-slate-700">
+                <CheckCircle2 className="h-4 w-4 text-slate-900 mr-2 flex-shrink-0 mt-0.5" />
+                <span>On-chain accredited KYC identity gating</span>
               </div>
+              <div className="flex items-start text-xs sm:text-sm text-slate-700">
+                <CheckCircle2 className="h-4 w-4 text-slate-900 mr-2 flex-shrink-0 mt-0.5" />
+                <span>M-Pesa fiat on-ramp to smart token balances</span>
+              </div>
+              <div className="flex items-start text-xs sm:text-sm text-slate-700">
+                <CheckCircle2 className="h-4 w-4 text-slate-900 mr-2 flex-shrink-0 mt-0.5" />
+                <span>Automated dividend disbursements on Hedera</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile First Gallery: Swipeable Carousel on Mobile, 3-Column Grid on Desktop */}
+          <div className="relative">
+            <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-5 pb-6 -mx-6 px-6 sm:-mx-0 sm:px-0 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:pb-0">
+              {meatsokoScreens.map((screen, idx) => (
+                <div
+                  key={idx}
+                  className="flex-shrink-0 w-[80vw] sm:w-[280px] md:w-full snap-center flex flex-col group"
+                >
+                  <div className="relative aspect-[9/20] w-full rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200 bg-slate-950">
+                    <Image
+                      src={screen.src}
+                      alt={screen.title}
+                      fill
+                      sizes="(max-width: 768px) 80vw, (max-width: 1200px) 33vw, 360px"
+                      className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
+                    />
+                  </div>
+                  <div className="mt-3 px-1">
+                    <p className="text-xs font-semibold text-slate-900 tracking-tight">
+                      {screen.title}
+                    </p>
+                    <p className="text-[11px] text-slate-500 line-clamp-1 mt-0.5">
+                      {screen.caption}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Mobile swipe indicator */}
+            <div className="md:hidden text-center mt-3">
+              <span className="text-[11px] text-slate-400 font-medium">
+                ← Swipe to explore mobile app screens →
+              </span>
             </div>
           </div>
         </section>
