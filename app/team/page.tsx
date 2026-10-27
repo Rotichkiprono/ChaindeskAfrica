@@ -19,7 +19,7 @@ export default function TeamPage() {
   ];
 
   return (
-    <div className="py-16 sm:py-24">
+    <div className="py-16 sm:py-24 bg-transparent">
       <div className="max-w-4xl mx-auto px-6">
         {/* Header */}
         <div className="border-b border-slate-200/80 pb-8 mb-12 sm:mb-16">

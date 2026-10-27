@@ -33,7 +33,7 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="py-16 sm:py-24">
+    <div className="py-16 sm:py-24 bg-transparent">
       <div className="max-w-6xl mx-auto px-6 space-y-24 sm:space-y-32">
         {/* Page Header */}
         <div className="border-b border-slate-200/80 pb-10">

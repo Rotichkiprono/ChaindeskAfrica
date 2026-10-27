@@ -3,43 +3,9 @@ import { ArrowRight } from "lucide-react";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1">
+    <div className="flex flex-col flex-1 bg-transparent">
       {/* Hero Section */}
-      <section className="relative flex-1 flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-6 py-28 sm:py-36 lg:py-44 overflow-hidden text-center">
-        {/* Minimal High-End Web3 Network Mesh SVG */}
-        <svg
-          className="absolute inset-0 h-full w-full stroke-slate-200/70 [mask-image:radial-gradient(ellipse_at_center,white_35%,transparent_80%)] pointer-events-none"
-          aria-hidden="true"
-        >
-          <defs>
-            <pattern
-              id="web3-network-mesh"
-              width="80"
-              height="80"
-              patternUnits="userSpaceOnUse"
-            >
-              {/* Interconnected Network Grid Lines */}
-              <path
-                d="M0 40 L40 0 L80 40 L40 80 Z M0 0 L80 80 M80 0 L0 80 M40 0 L40 80 M0 40 L80 40"
-                fill="none"
-                strokeWidth="0.65"
-                className="stroke-slate-200"
-              />
-              {/* Network Node Vertices */}
-              <circle cx="40" cy="40" r="2" className="fill-slate-300" />
-              <circle cx="0" cy="0" r="1.5" className="fill-slate-300" />
-              <circle cx="80" cy="0" r="1.5" className="fill-slate-300" />
-              <circle cx="0" cy="80" r="1.5" className="fill-slate-300" />
-              <circle cx="80" cy="80" r="1.5" className="fill-slate-300" />
-              <circle cx="40" cy="0" r="1.5" className="fill-slate-300" />
-              <circle cx="40" cy="80" r="1.5" className="fill-slate-300" />
-              <circle cx="0" cy="40" r="1.5" className="fill-slate-300" />
-              <circle cx="80" cy="40" r="1.5" className="fill-slate-300" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#web3-network-mesh)" />
-        </svg>
-
+      <section className="relative flex-1 flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-6 py-28 sm:py-36 lg:py-44 overflow-hidden text-center bg-transparent">
         {/* Centered Hero Content */}
         <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-medium tracking-tight text-slate-900 leading-[1.15]">
@@ -63,7 +29,7 @@ export default function HomePage() {
       </section>
 
       {/* The Advantage Section */}
-      <section className="border-t border-slate-200/80 bg-white/80 backdrop-blur-sm py-16 sm:py-24">
+      <section className="border-t border-slate-200/80 bg-white/70 backdrop-blur-sm py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-16">
             <p className="text-xs font-semibold tracking-widest uppercase text-slate-500 mb-2">

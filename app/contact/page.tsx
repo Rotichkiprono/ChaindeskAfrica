@@ -1,6 +1,6 @@
 export default function ContactPage() {
   return (
-    <div className="py-16 sm:py-24">
+    <div className="py-16 sm:py-24 bg-transparent">
       <div className="max-w-xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-10">
