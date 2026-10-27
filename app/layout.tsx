@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
+import Image from "next/image";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,9 +15,13 @@ export const metadata: Metadata = {
   description:
     "To build secure, scalable, and transparent digital infrastructure for African enterprises.",
   icons: {
-    icon: "/chaindesk_icon.jpeg",
-    shortcut: "/chaindesk_icon.jpeg",
-    apple: "/chaindesk_icon.jpeg",
+    icon: [
+      { url: "/chaindesk_icon.png", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/chaindesk_icon.jpeg", type: "image/jpeg" },
+    ],
+    shortcut: "/chaindesk_icon.png",
+    apple: "/apple-icon.png",
   },
   openGraph: {
     title: "CHAINDESK AFRICA | Enterprise Web3 & DLT Consultancy",
@@ -97,13 +102,21 @@ export default function RootLayout({
         {/* Floating Sticky Glassmorphism Header */}
         <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            {/* Left Side: Sleek Typography Logo */}
+            {/* Left Side: Sleek Typography Logo with Custom Geometric Mark */}
             <div className="flex items-center">
               <Link
                 href="/"
                 className="flex items-center tracking-tight transition-opacity hover:opacity-85"
                 aria-label="Chaindesk Africa Home"
               >
+                <Image
+                  src="/chaindesk_icon.png"
+                  alt="Chaindesk Mark"
+                  width={24}
+                  height={24}
+                  className="mr-2.5 h-6 w-auto object-contain"
+                  priority
+                />
                 <span className="font-bold text-slate-900 text-base sm:text-lg">
                   CHAINDESK
                 </span>
