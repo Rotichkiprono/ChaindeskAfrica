@@ -9,6 +9,7 @@ interface CarouselSlide {
   src: string;
   title: string;
   caption: string;
+  alt: string;
 }
 
 const slides: CarouselSlide[] = [
@@ -16,31 +17,37 @@ const slides: CarouselSlide[] = [
     src: "/MS_1.jpg",
     title: "Portfolio Valuation",
     caption: "Real-time tokenized equity holding and performance tracking over time.",
+    alt: "Meatsoko tokenized equity mobile app dashboard showing Hedera integration and live asset valuation",
   },
   {
     src: "/MS_2.jpg",
     title: "Fiat Ingestion (M-Pesa)",
     caption: "Seamless African mobile money on-ramp for tokenized equity investment.",
+    alt: "Meatsoko mobile app investment interface with M-Pesa mobile money fiat-to-token on-ramp",
   },
   {
     src: "/MS_3.jpg",
     title: "Hedera Token Dispatch",
     caption: "Instant peer-to-peer digital asset transfer using Hedera Account IDs.",
+    alt: "Meatsoko digital asset transfer screen executing instant peer-to-peer Hedera token dispatch",
   },
   {
     src: "/MS_4.jpg",
     title: "On-Chain Activity",
     caption: "Auditable transactions, transfers, and automated dividend distribution.",
+    alt: "Meatsoko on-chain transaction history interface tracking transfers and automated dividend distribution",
   },
   {
     src: "/MS_5.jpg",
     title: "Encrypted QR Settlement",
     caption: "KYC-verified wallet address with encrypted QR dispatch for accredited investors.",
+    alt: "Meatsoko investor identity screen featuring KYC-verified wallet and encrypted QR settlement code",
   },
   {
     src: "/MS_6.jpg",
     title: "Cap Table Governance",
     caption: "Consensus-backed asset governance and downloadable official dividend statements.",
+    alt: "Meatsoko cap table governance interface for consensus-backed asset holding and official dividend statements",
   },
 ];
 
@@ -121,14 +128,29 @@ export default function MeatsokoCarousel() {
             >
               <Image
                 src={currentSlide.src}
-                alt={currentSlide.title}
+                alt={currentSlide.alt}
                 fill
-                priority
+                priority={currentIndex === 0}
+                loading={currentIndex === 0 ? undefined : "lazy"}
                 sizes="(max-width: 640px) 320px, 384px"
                 className="object-cover object-top"
               />
             </motion.div>
           </AnimatePresence>
+        </div>
+
+        {/* Hidden SEO & prefetch container for remaining slides */}
+        <div className="hidden" aria-hidden="true">
+          {slides.slice(1).map((slide, idx) => (
+            <Image
+              key={idx}
+              src={slide.src}
+              alt={slide.alt}
+              width={384}
+              height={682}
+              loading="lazy"
+            />
+          ))}
         </div>
 
         {/* Right Arrow Button */}
