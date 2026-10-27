@@ -9,10 +9,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://chaindesk.africa"),
+  metadataBase: new URL("https://www.chaindeskafrica.com"),
   title: "CHAINDESK AFRICA | Enterprise Web3 & DLT Consultancy",
   description:
     "To build secure, scalable, and transparent digital infrastructure for African enterprises.",
+  keywords: [
+    "Web3 consultancy Africa",
+    "DLT infrastructure",
+    "Hedera tokenization",
+    "smart contract auditing",
+    "enterprise blockchain",
+  ],
   icons: {
     icon: [
       { url: "/chaindesk_icon.png", type: "image/png" },
@@ -23,21 +30,14 @@ export const metadata: Metadata = {
     apple: "/apple-icon.png",
   },
   openGraph: {
+    type: "website",
+    locale: "en_KE",
+    url: "https://www.chaindeskafrica.com",
+    siteName: "Chaindesk Africa",
     title: "CHAINDESK AFRICA | Enterprise Web3 & DLT Consultancy",
     description:
       "To build secure, scalable, and transparent digital infrastructure for African enterprises.",
-    url: "https://chaindesk.africa",
-    siteName: "Chaindesk Africa",
-    images: [
-      {
-        url: "/chaindesk_preview.jpeg",
-        width: 1024,
-        height: 571,
-        alt: "CHAINDESK AFRICA - Enterprise Web3 & DLT Consultancy",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
+    images: ["/chaindesk_preview.jpeg"],
   },
   twitter: {
     card: "summary_large_image",

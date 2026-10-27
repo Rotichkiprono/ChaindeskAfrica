@@ -1,3 +1,22 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us | Chaindesk Africa",
+  description:
+    "Initiate a project or schedule a technical consultation with our DLT engineering team.",
+  openGraph: {
+    title: "Contact Us | Chaindesk Africa",
+    description:
+      "Initiate a project or schedule a technical consultation with our DLT engineering team.",
+    url: "/contact",
+  },
+  twitter: {
+    title: "Contact Us | Chaindesk Africa",
+    description:
+      "Initiate a project or schedule a technical consultation with our DLT engineering team.",
+  },
+};
+
 export default function ContactPage() {
   return (
     <div className="py-12 md:py-20 lg:py-24 bg-transparent">

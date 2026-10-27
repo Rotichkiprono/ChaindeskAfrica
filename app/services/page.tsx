@@ -1,5 +1,23 @@
+import type { Metadata } from "next";
 import { Cpu, Landmark, ShieldCheck, Workflow, CheckCircle2 } from "lucide-react";
 import MeatsokoCarousel from "@/components/MeatsokoCarousel";
+
+export const metadata: Metadata = {
+  title: "Web3 Services & DLT Architecture | Chaindesk Africa",
+  description:
+    "Enterprise blockchain integration, ERC-3643 tokenization, and smart contract auditing. View our Meatsoko Hedera integration.",
+  openGraph: {
+    title: "Web3 Services & DLT Architecture | Chaindesk Africa",
+    description:
+      "Enterprise blockchain integration, ERC-3643 tokenization, and smart contract auditing. View our Meatsoko Hedera integration.",
+    url: "/services",
+  },
+  twitter: {
+    title: "Web3 Services & DLT Architecture | Chaindesk Africa",
+    description:
+      "Enterprise blockchain integration, ERC-3643 tokenization, and smart contract auditing. View our Meatsoko Hedera integration.",
+  },
+};
 
 export default function ServicesPage() {
   const bentoServices = [

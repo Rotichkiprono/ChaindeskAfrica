@@ -1,4 +1,22 @@
+import type { Metadata } from "next";
 import { Mail, Linkedin } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Technical Leadership | Chaindesk Africa",
+  description:
+    "Meet our lead Web3 and cybersecurity engineers architecting Africa's decentralized infrastructure.",
+  openGraph: {
+    title: "Technical Leadership | Chaindesk Africa",
+    description:
+      "Meet our lead Web3 and cybersecurity engineers architecting Africa's decentralized infrastructure.",
+    url: "/team",
+  },
+  twitter: {
+    title: "Technical Leadership | Chaindesk Africa",
+    description:
+      "Meet our lead Web3 and cybersecurity engineers architecting Africa's decentralized infrastructure.",
+  },
+};
 
 export default function TeamPage() {
   const team = [
