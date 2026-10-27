@@ -29,7 +29,7 @@ export default function TeamPage() {
   ];
 
   return (
-    <div className="bg-white min-h-screen py-16 sm:py-24">
+    <div className="py-16 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="border-b border-slate-200 pb-8 mb-12 sm:mb-16">
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">

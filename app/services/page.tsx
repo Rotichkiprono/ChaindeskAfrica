@@ -2,7 +2,7 @@ import { Smartphone, CheckCircle, Shield, ArrowUpRight } from "lucide-react";
 
 export default function ServicesPage() {
   return (
-    <div className="bg-white min-h-screen py-16 sm:py-24">
+    <div className="py-16 sm:py-24">
       <div className="max-w-4xl mx-auto px-6 space-y-20">
         {/* Page Title */}
         <div className="border-b border-slate-200 pb-10">
